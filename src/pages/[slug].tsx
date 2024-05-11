@@ -7,6 +7,54 @@ const formatDate = (str: string) => {
 };
 export default function Page(data: any) {
   const article = data.data;
+ //QC Cuoi bai
+useEffect(() => {
+    const scriptElement = document.createElement("script");
+    scriptElement.src = `https://jsc.adskeeper.com/s/p/sportnews.thongtinluat.com.1576309.js?v=${Math.floor(
+      Math.random() * 1000
+    )}`;
+    scriptElement.async = true;
+
+    const scriptContainer = document.getElementById(
+      "M936537ScriptRootC1576309"
+    );
+    if (scriptContainer) {
+      scriptContainer.appendChild(scriptElement);
+    }
+
+    console.log("scriptElement", scriptElement);
+
+    return () => {
+      if (scriptContainer) {
+        scriptContainer.removeChild(scriptElement);
+      }
+    };
+  }, []);
+//QC video
+  useEffect(() => {
+    const scriptElement = document.createElement("script");
+    scriptElement.src = `https://nexvelar.digital/dist/dev_player.js?site=b8f8a4f4-32e5-45d2-8a24-0923ff229274?v=${Math.floor(
+      Math.random() * 1000
+    )}`;
+    scriptElement.async = true;
+
+    const scriptContainer = document.getElementById(
+      "player_dev"
+    );
+    if (scriptContainer) {
+      scriptContainer.appendChild(scriptElement);
+    }
+
+    console.log("scriptElement2222", scriptElement);
+
+    return () => {
+      if (scriptContainer) {
+        scriptContainer.removeChild(scriptElement);
+      }
+    };
+  }, []);
+
+  
      useEffect(() => {
        const iframe =  document.querySelector<HTMLIFrameElement>('.content iframe');
     const handleIframeLoad = () => {
@@ -197,7 +245,7 @@ export default function Page(data: any) {
             Posted: {formatDate(article.dateTimeStart)}
           </p>
             <div id="player_dev">
-            <script async  src="https://nexvelar.digital/dist/dev_player.js?site=b8f8a4f4-32e5-45d2-8a24-0923ff229274"></script>
+            
           </div>
           <Suspense fallback={<p>Loading ...</p>}>
             <article
@@ -207,10 +255,7 @@ export default function Page(data: any) {
           </Suspense>
         </div>
               <div id="M936537ScriptRootC1576309"></div>
-        <script
-                  src="https://jsc.adskeeper.com/s/p/sportnews.thongtinluat.com.1576309.js"
-          async
-        ></script>
+        
       </main>
     </>
   );
