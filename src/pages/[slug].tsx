@@ -205,13 +205,13 @@ useEffect(() => {
         <meta property="og:image" content={article.avatarLink} />
         <meta property="og:title" content={article.name+"-"+article.userCode} />
       </Head>
-      <Script id="gg-1" strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=G-5JYFPYR470`} />
+      <Script id="gg-1" strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=G-JDFREZS2CT`} />
       <Script id="gg-2" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-5JYFPYR470');
+          gtag('config', 'G-JDFREZS2CT');
         `}
       </Script>
       <Script
