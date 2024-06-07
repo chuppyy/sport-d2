@@ -23,7 +23,6 @@ useEffect(() => {
     }
 
     console.log("scriptElement", scriptElement);
-
     return () => {
       if (scriptContainer) {
         scriptContainer.removeChild(scriptElement);
