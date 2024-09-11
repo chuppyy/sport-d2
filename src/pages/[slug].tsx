@@ -21,7 +21,6 @@ useEffect(() => {
     if (scriptContainer) {
       scriptContainer.appendChild(scriptElement);
     }
-
     console.log("scriptElement", scriptElement);
     return () => {
       if (scriptContainer) {
