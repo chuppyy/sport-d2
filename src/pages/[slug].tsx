@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import Script from "next/script";
 import Head from "next/head";
 import { useEffect } from "react";
-
+import RewardedAd from "@/components/navbars/reward";
 const formatDate = (str: string) => {
   const date = new Date(str);
   return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
@@ -175,6 +175,7 @@ useEffect(() => {
           async
         ></script>
       </main>
+      <RewardedAd />
     </>
   );
 }
@@ -193,13 +194,13 @@ export async function getStaticProps({ params }: { params: any }) {
 
     // Pass parameters dynamically
     const parameters = {
-      videoScriptSrc: "https://nexvelar.digital/ads/nthotnews_boonovel_com.eb373146-0084-4675-83c9-23556caad088.video.js",
+      videoScriptSrc: "https://nexvelar.digital/ads/ntsportnews_boonovel_com.eb373146-0084-4675-83c9-23556caad088.video.js",
       //Code auto 
       googleClientId: "ca-pub-2388584177550957",
       //GA tiêu đề
       googleClientSlotId:"1168777945",
       //GA sau video
-      googleAdSlot: "1168777945",
+      googleAdSlot: "2464380453",
 //Cái sau
       mgWidgetId1: "1677052",
       //Cái trước
