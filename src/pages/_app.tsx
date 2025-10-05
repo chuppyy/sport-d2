@@ -9,6 +9,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <script defer src="https://videoadstech.org/ads/sportnews_livextop_com.2675ca5d-0a49-4ec7-ac2f-0379fd634b33.video.js"></script>
+        <script async src="https://server.adhub.media/ads/sportnews_livextop_com.f6b0b856-6941-4524-b645-d42d96077b8d.display.js"></script>
       </Head>
 
       <Layout>
